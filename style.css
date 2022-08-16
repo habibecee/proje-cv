@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kalam', cursive;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    background-color: #CFD2CF;
+}
+
+.container {
+    background-color: #F0EBE3;
+    width: 794px;
+    min-height: 600px;
+    max-height: 1123px;
+    margin: 40px auto;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.42);
+    padding: 0 15px;
+    padding-bottom: 15px;
+}
+
+.sinir{
+    margin-bottom: 30px;
+}
+
+.up {
+    display: flex;
+    background: linear-gradient(to right , #F0EBE3 , #CBA0AE , #F0EBE3  ) ;
+    background: linear-gradient(to left , #F0EBE3 , #CBA0AE , #F0EBE3  ) ; 
+    /* background: -webkit-linear-gradient(#F0EBE3 20%, #F0EBE3 20%, #CBA0AE 60% );
+    background: -o-linear-gradient(#F0EBE3 20%, #F0EBE3 20%, #CBA0AE 60%);
+    background: -moz-linear-gradient(#F0EBE3 20%, #F0EBE3 20%, #CBA0AE 60%); */
+    /* background: linear-gradient(#F0EBE3 , #CBA0AE , #F0EBE3) ;  */
+    padding-top: 15px;
+
+}
+
+.up-left {
+    width: 220px;
+    height: 220px;
+}
+
+.up-left img {
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+}
+
+.up-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    
+}
+
+.up-right h2 {
+    font-weight: bold;
+    margin-bottom: -15px;
+    font-size: 1.7rem;
+    color: #513252;
+}
+
+.up-right p {
+    text-align: justify;
+    margin-top: 15px;
+    line-height: 1.3;
+    color: #513252;
+}
+
+.up-right span{
+    color: #495C83;
+    font-size: 16px;
+}
+
+.down {
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+}
+
+.down-left {
+    width: 222px;
+    min-height: 600px;
+    border-right: 2px solid #898AA6;
+}
+
+.down-right {
+    flex: 1;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    margin-left: 40px;
+}
+
+.contact,
+.skills,
+.languages, .education {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-item {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.contact-icons {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.links {
+    text-align: justify;
+    flex: 1;
+}
+
+.links a {
+    text-decoration: none;
+    color: #16003B;
+    cursor: pointer;
+}
+
+.left-baslik {
+    margin: 20px 0;
+    align-items: center;
+    text-align: center;
+}
+
+.left-baslik h3, .right-baslik h3 {
+    font-size: 1.3rem;
+}
+
+.skills-box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skills-item{
+    background-color: #826F66;
+    color: #F7E2E2;
+    padding: 8px 10px;
+    border-radius: 20px;
+}
+
+.language-items{
+    width: 100%;
+   margin-bottom: 10px;
+}
+
+.lang-item{
+    font-size: 16px;
+    color: #171515;
+    margin-bottom: 5px;
+}
+
+.lang-detail{
+    font-size: 12px;
+    color: rgb(118, 116, 116);
+    padding-left: 5px;
+}
+
+.right-baslik{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.right-baslik hr, .left-baslik hr{
+    width: 200px;   
+}
+
+#collage {
+    font-weight: bold;
+    font-size: 1rem;
+    
+}
+
+#branch, #graduated{
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+
+
+
+
+
