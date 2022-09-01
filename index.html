@@ -7,38 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY CV - HABİBE BULUT </title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+    <script type="module" src="./dictionary.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+    <div class="top-pdf">
+        <button id="pdfBtn"> Export to PDF </button>
+        <select name="" id="language">
+            <option value="tr" selected> TR </option>
+            <option value="en"> ENG </option>
+        </select>
+    </div>
 
-    <div class="container">
+
+    <div class="container" id="myCv">
         <div class="up">
             <div class="up-left">
-
-                <img src="cvphoto.jpg" alt="" srcset="">
+                <div>
+                    <img src="cvphoto.jpg" alt="" srcset="">
+                </div>
+                <div>
+                    <h2 id="nameSurname"> HABİBE BULUT </h2>
+                    <hr>
+                    <span> <i class="up-left-i"> Frontend Developer </i></span>
+                </div>
 
             </div>
             <div class="up-right">
-                <div>
-                    <h2> HABİBE BULUT </h2>
-                    <hr>
-                    <span> <i class="up-right-i"> Frontend Developer & Avukat </i></span>
-                </div>
+
+
                 <h3> HAKKIMDA </h3>
                 <p> Marmara Üniversitesi Hukuk Fakültesi 2017 mezunuyum. 2018-2022 yılları arasında Teknoloji ve
                     Bilişim Hukuku başta olmak üzere hukukun çeşitli alanlarında avukat olarak çalıştım. Teknoloji
                     ve
                     bilişim alanına olan
                     yoğun ilgimin hukukla sınırlı kalmadığını farketmemle birlikte 2021 Eylül ayı itibariyle
-                    kariyerime Frontend developer olarak devam etmeye karar verdim. Bu alan ile alakalı Eylül 2021-
-                    Mayıs 2022 tarihleri arasında başta Udemy ve Youtube olmak üzere çeşitli platformlar üzerinden
-                    eğitimler almakla birlikte daha düzenli ve verimli olması amacıyla Mayıs 2022- Aralık 2022
+                    kariyerime Frontend Developer olarak devam etmeye karar verdim. Mayıs 2022- Aralık 2022
                     tarihleri
-                    arasında Arabulue/Udemig şirketi bünyesinde verilen React ile Web Frontend eğitimine katıldım.
+                    arasında Arabulue/Udemig bünyesinde verilen React ile Web Frontend eğitimine katıldım.
                     Bu
                     eğitimler
                     sırasında hem aldığım kurslar bünyesinde hem de şahsi olarak bir çok proje geliştirdim.
@@ -47,15 +59,7 @@
                         style="text-decoration:none; font-weight: bold;">Github
                         Portfolyom</a>
                     üzerinden
-                    görebilirsiniz. <br> Kişilik olarak zaten kararlı ve çalışkan olmamla beraber başka alanda olsa
-                    da
-                    mevcut
-                    iş ve çalışma deneyimim sayesinde ekip çalışmasına yatkın, çözüm odaklı, araştırma ruhu yüksek
-                    ve iş
-                    tamamlama kararlılığı ve gayretine sahip sorumluluk sahibi bir kişiliğe sahibim. Başvurmuş
-                    olduğum
-                    şirketler
-                    bünyesindeki çalışmalarım ile bu alandaki yeteneklerimi geliştirmeyi amaçlamaktayım. </p>
+                    görebilirsiniz. </p>
             </div>
         </div>
 
@@ -118,8 +122,14 @@
                     <div class="skills-box">
                         <p class="skills-item"> HTML5 </p>
                         <p class="skills-item"> CSS3 </p>
+                        <p class="skills-item"> Bootstrap</p>
                         <p class="skills-item"> JavaScript </p>
-                        <p class="skills-item"> React.js</p>
+                        <p class="skills-item"> React.Js</p>
+                        <p class="skills-item"> React.Native</p>
+                        <p class="skills-item"> Redux</p>
+                        <p class="skills-item"> TypeScript</p>
+                        <p class="skills-item"> SCSS</p>
+
                     </div>
 
                 </div>
@@ -155,12 +165,15 @@
                     <div class="down-right-item">
                         <div class="language-items">
                             <ul>
-                                <li class="lang-item" id="collage"> ARABULUE / UDEMIG </li>
-                                <p class="lang-detail" id="branch"> <i> REACT İLE WEB FRONTEND </i></p>
-                                <p class="lang-detail" id="graduated"> <i> Mayıs 2022 - Aralık 2022 </i></p>
-                                <li class="lang-item" id="collage"> MARMARA ÜNİVERSİTESİ </li>
-                                <p class="lang-detail" id="branch"> <i> LİSANS / HUKUK </i></p>
-                                <p class="lang-detail" id="graduated"> <i> Eylül 2013 - Haziran 2017 </i></p>
+                                <li class="lang-item" id="collage"> ARABULUE / UDEMIG <span> <i class="lang-detail"
+                                            id="graduated">( Mayıs 2022 - Aralık 2022 ) </i> </span> </li>
+                                <p class="lang-detail" id="branch"> <b> REACT İLE WEB FRONTEND </b></p>
+
+                                <li class="lang-item" id="collage"> MARMARA ÜNİVERSİTESİ <span> <i class="lang-detail"
+                                            id="graduated">( Eylül 2013 - Haziran 2017 ) </i> </span> </li>
+                                <p class="lang-detail" id="branch"> <b> LİSANS / HUKUK </b>
+                                </p>
+
 
                             </ul>
                         </div>
@@ -172,51 +185,63 @@
                     <div class="down-right-item">
                         <div class="language-items">
                             <ul>
+                                <li class="lang-item" id="collage"> PROJE 8: TODO APP (<a
+                                        href="https://github.com/habibecee/TO-DO-APP---with-REACT" id="projects-links"
+                                        target="_blank">
+                                        github.com/habibeece/TODO-APP </a> ) </li>
+                                <p class="lang-detail" id="branch"> <i> React ile oluşturulmuş bir todo app
+                                        çalışmasıdır. </i></p>
+
+                                <li class="lang-item" id="collage"> PROJE 7: WEATHER APP ( <a
+                                        href="https://github.com/habibecee/WEATHER-APP" id="projects-links"
+                                        target="_blank">
+                                        github.com/habibeece/WEATHER-APP </a> ) </li>
+                                <p class="lang-detail" id="branch"> <i> React ile oluşturulmuş bir hava durumu
+                                        uygulamasıdır. Projeye Tailwild kütüphanesi de eklenerek güncel hava durumu
+                                        yansıtılması amaçlanmıştır. </i></p>
+
                                 <li class="lang-item" id="collage"> PROJE 6: TOYSIVERSE ( <a
                                         href="https://github.com/habibecee/TOYSIVERSE" id="projects-links"
                                         target="_blank">
                                         github.com/habibeece/Toysiverse </a> ) </li>
-                                <p class="lang-detail" id="branch"> <i> Bu projede HTML5, CSS3, JavaScript kullanılarak
-                                        static bir web alışveriş sitesi yapılması amaçlanmıştır. </i></p>
+                                <p class="lang-detail" id="branch"> <i> Bu projede HTML5, CSS3 ve JavaScript
+                                        kullanılarak
+                                        static bir alışveriş sitesi yapılmıştır. </i></p>
                                 <li class="lang-item" id="collage"> PROJE 5: ANALOG SAAT ( <a
                                         href="https://github.com/habibecee/ANALOG-SAAT" id="projects-links"
                                         target="_blank">
                                         github.com/habibeece/Analog-Saat </a> ) </li>
-                                <p class="lang-detail" id="branch"> <i> Bu projede HTML5, CSS3, JavaScript kullanılarak
+                                <p class="lang-detail" id="branch"> <i> Bu projede JavaScript ile
                                         analog saat yapımı gösterilmiştir. </i></p>
                                 <li class="lang-item" id="collage"> PROJE 4: JS UYGULAMASI ( <a
                                         href="https://github.com/habibecee/ilk-js-projesi" id="projects-links"
                                         target="_blank">
                                         github.com/habibeece/JS </a> ) </li>
-                                <p class="lang-detail" id="branch"> <i> Bu proje JS kullanımının öğrenilmesi aşamasında
-                                        yapılmış ilk projedir. JS kullanılarak
+                                <p class="lang-detail" id="branch"> <i> JS kullanılarak
                                         butonlar yardımıyla arkaplan renk değişikliğinin nasıl yapılacağı
                                         gösterilmiştir. </i></p>
                                 <li class="lang-item" id="collage"> PROJE 3: PETRICHOR ( <a
                                         href="https://github.com/habibecee/petrichor" id="projects-links"
                                         target="_blank">
                                         github.com/habibeece/Petrichor </a> ) </li>
-                                <p class="lang-detail" id="branch"> <i> Bu projede HTML5, CSS3 ve Bootstrap kullanılarak
-                                        web sayfası yapımı gösterilmiştir. </i></p>
+                                <p class="lang-detail" id="branch"> <i> Bootstrap kullanılarak oluşturulmuş
+                                        web sayfasıdır. </i></p>
                                 <li class="lang-item" id="collage"> PROJE 2: UNIVERSE ( <a
                                         href="https://github.com/habibecee/universe" id="projects-links"
                                         target="_blank">
                                         github.com/habibeece/Universe </a> ) </li>
                                 <p class="lang-detail" id="branch"> <i> Bu projede HTML5, CSS3 kullanılarak
-                                        blog sayfası yapılmıştır. Proje, css ile mix-blend-mode uygulamasının
-                                        gösterilmesi amacıyla yapılmıştır. </i></p>
+                                        blog sayfası yapılmış ve css ile mix-blend-mode uygılanmıştır </i></p>
                                 <li class="lang-item" id="collage"> PROJE 1: YANKI ( <a
                                         href="https://github.com/habibecee/yanki" id="projects-links" target="_blank">
                                         github.com/habibeece/Yankı </a> ) </li>
                                 <p class="lang-detail" id="branch"> <i> Bu projede HTML5, CSS3 kullanılarak
-                                        bir psikolojik danışmanlık merkezi için blog sayfası yapılmıştır. Proje bu
-                                        alandaki ilk deneyimimi göstermektedir. Frontend alanında kısa sürede kat etmiş
-                                        olduğum yolun görülebilmesi amacıyla eklenmiştir. </i></p>
+                                        blog sayfası yapılmıştır. </i></p>
 
                             </ul>
                         </div>
                     </div>
-                    <div class="right-baslik">
+                    <!-- <div class="right-baslik">
                         <h3> İŞ DENEYİMİ </h3>
                         <hr>
                     </div>
@@ -232,13 +257,15 @@
                                 </p>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </div>
 
+    <script type="module" src="./dictionary.js"></script>
     <script src="main.js"></script>
+
 </body>
 
 </html>
