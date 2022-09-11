@@ -13,6 +13,12 @@ window.addEventListener("load", function () {
 
 const pdfBtn = document.getElementById("pdfBtn");
 const languageSelect = document.getElementById("language");
+const logOut = document.getElementById("logOut");
+
+logOut.addEventListener("click", function () {
+	localStorage.getItem("isLogin", JSON.stringify(false));
+	window.location.reload();
+});
 // const keys = [];
 
 // const dictionary = [

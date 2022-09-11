@@ -13,7 +13,7 @@
     <h1 class="baslik"> LOGIN PAGE </h1>
     <h3 class='alert'> CV'Yİ GÖRÜNTÜLEMEK İÇİN LÜTFEN GİRİŞ YAPINIZ! </h3>
     <div class="form">
-        <form action="">
+        <form onsubmit="return handleLogin(event)">
             <div class="email">
                 <label for="email"> Email</label>
                 <input type="text" id="email" />
@@ -34,7 +34,43 @@
     </div>
 
 
-    <!-- <script src="./main.js"></script> -->
+    <script>
+        function handleLogin(event) {
+            event.prevent.default();
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+
+            if (email.value === '' || password.value === '') {
+                alert("email or password can't be empty");
+                return;
+            }
+            const user = {
+                email: email.value,
+                password: password.value,
+            }
+            fetch('http://localhost:3004/user/login', {
+                method: 'post',
+                body: JSON.stringify(user),
+                headers: {
+                    Accept: 'application/json', 'Content-Type': 'application/json',
+                },
+            })
+
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.status === 400) {
+                        alert(data.message)
+                        return;
+                    }
+                    if (data.status === 200) {
+                        localStorage.setItem('isLogin', JSON.stringify(true))
+                        window.location.replace('http://127.0.0.1:5500/index.html')
+                    }
+                })
+                .catch((error) => console.log(error));
+        }
+    </script>
 </body>
 
 </html>

@@ -34,6 +34,25 @@ body {
     height: 80px !important ;
 } */
 
+#logOut{
+    padding: 10px 50px;
+    border: none;
+    background-color: rgb(33, 170, 47);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s linear;
+    border-radius: 8px;
+    margin-top: 30px;
+    margin-right: 190px;
+}
+
+#logOut:hover{
+    box-shadow: 0 0 5px 2px #1715158f ;
+    text-shadow: 1px 1px #171515d6, 2px 2px #331e34, 2px 2px #06cdff;
+}
+
 #pdfBtn{
     padding: 10px 80px;
     border: none;
@@ -47,8 +66,8 @@ body {
     margin-top: 30px;
 }
 
-#top-pdf-btn:hover{
-    box-shadow: 0 0 5px 2px #171515 ;
+#pdfBtn:hover{
+    box-shadow: 0 0 5px 2px #171515bc ;
     text-shadow: 1px 1px #171515, 2px 2px #331e34, 2px 2px #06cdff;
 }
 
