@@ -1,5 +1,16 @@
 // import dictionary from "./dictionary";
 
+window.addEventListener("load", function () {
+	const dataFromlocalStorage = JSON.parse(localStorage.getItem("isLogin"));
+	console.log(dataFromlocalStorage);
+	if (dataFromlocalStorage === null) {
+		localStorage.setItem("isLogin", JSON.stringify(false));
+	}
+	if (dataFromlocalStorage === null || dataFromlocalStorage === false) {
+		this.window.location.replace("http://127.0.0.1:5500/login.html");
+	}
+});
+
 const pdfBtn = document.getElementById("pdfBtn");
 const languageSelect = document.getElementById("language");
 // const keys = [];
